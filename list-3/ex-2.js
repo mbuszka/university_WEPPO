@@ -1,14 +1,17 @@
-var memo = [0, 1]
+var fib = (function () {
+  var memo = [0, 1]
 
-function fib (n) {
-  if (memo[n] === undefined) {
-    memo[n] = fib(n-1) + fib(n-2)
-    return memo[n]
-  } else {
-    return memo[n]
+  return function (n) {
+    if (memo[n] === undefined) {
+      memo[n] = fib(n-1) + fib(n-2)
+      return memo[n]
+    } else {
+      return memo[n]
+    }
   }
-}
+})()
 
 console.time()
-fib(1000)
+console.log(fib(10))
+
 console.timeEnd()

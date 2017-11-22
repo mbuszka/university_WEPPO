@@ -25,5 +25,7 @@ function* fibGen () {
     yield fn
   }
 }
+for (var x of fibGen())
+  console.log(x)
 
 exports.fibGen = fibGen
