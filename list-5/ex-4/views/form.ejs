@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <form action="/validate" method="POST">
+      <table>
+          <tr>
+            <td>Imię</td>
+            <td><input type="text" name="name" value="<%= name %>"></td>
+            <td>Nazwisko</td>
+            <td><input type="text" name="surname" value="<%= surname %>"></td>
+          </tr>
+          <tr>
+            <td>Przedmiot</td>
+            <td><input type="text" name="class_" value="<%= class_ %>"></td>
+            <td>Data</td>
+            <td><input type="date" name="date" value="<%= date %>"></td>
+          </tr>
+          <tr>
+            <% for (var i = 0; i < 10; i++) { %>
+             <td><input type="number" name="ex-<%= i %>" value="<%= exercises[i] %>"/></td>
+            <% } %>
+          </tr>
+        </table>
+      <input type="submit" value="Drukuj">
+    </form>
+  </body>
+</html>
