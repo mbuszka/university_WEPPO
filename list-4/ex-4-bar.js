@@ -1,4 +1,6 @@
-// var Foo = require('./ex-4-foo.js')
+var Foo = require('./ex-4-foo.js')
+
+console.log(Foo)
 
 var Bar = function (bar) { this.bar = bar }
 
@@ -9,4 +11,4 @@ Bar.prototype.createFoo = function () {
 
 module.exports = Bar
 
-var Foo = require('./ex-4-foo.js')
+// var Foo = require('./ex-4-foo.js')

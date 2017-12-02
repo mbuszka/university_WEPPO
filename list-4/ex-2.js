@@ -2,10 +2,10 @@ var T = require('./ex-1.js')
 
 T.Tree.prototype[Symbol.iterator] = function* () {
   if (this.left !== T.Leaf)
-    for (var x of this.left) yield x
+    yield* this.left
   yield this.value
   if (this.right !== T.Leaf)
-    for (var x of this.right) yield x
+    yield* this.right
 }
 
 var t =
